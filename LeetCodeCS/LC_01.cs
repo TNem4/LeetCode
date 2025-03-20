@@ -10,15 +10,15 @@ namespace LeetCodeCS
     {
         public int[] TwoSum(int[] nums, int target)
         {
-            for (int k = 0; k < nums.Length; k++)
+            Dictionary<int, int> dict = new Dictionary<int, int>();
+            for (int i = 0; i < nums.Length; i++)
             {
-                for (int i = 1; i < nums.Length; i++)
+                int newTarget = target - nums[i];
+                if (dict.ContainsKey(newTarget))
                 {
-                    if (nums[k] + nums[i] == target)
-                    {
-                        return new int[] { k, i };
-                    }
+                    return new int[] { dict[newTarget], i };
                 }
+                dict[nums[i]] = i;
             }
             return null;
         }
