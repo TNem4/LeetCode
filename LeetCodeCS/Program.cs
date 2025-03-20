@@ -1,15 +1,1 @@
-﻿// 01
-int[] TwoSum(int[] nums, int target)
-{
-    for (int k = 0; k < nums.Length; k++)
-    {
-        for (int i = 1; i < nums.Length; i++)
-        {
-            if (nums[k] + nums[i] == target)
-            {
-                return new int[] { k, i };
-            }
-        }
-    }
-    return null;
-}
+﻿// Check other files for solutions, I decided this way it will be easier to find specific solutions
